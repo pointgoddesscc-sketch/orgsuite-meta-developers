@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OrgSuite Meta Developers</title>
+  <meta name="description" content="OrgSuite companion for Meta for Developers: App Review checklist, privacy policy, license. No secrets." />
+  <style>
+    :root { --bg:#0b1220; --card:#121a2b; --text:#eef2ff; --muted:#9aa7c2; --ok:#3dd68c; --wait:#f5c14a; --no:#ff7a7a; --line:#243049; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: ui-sans-serif, system-ui, sans-serif; background:var(--bg); color:var(--text); line-height:1.5; }
+    main { max-width: 920px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); margin: 0 0 .4rem; }
+    p.lead { color: var(--muted); margin-top: 0; }
+    .grid { display:grid; gap: .85rem; }
+    @media (min-width: 720px) { .grid.two { grid-template-columns: 1fr 1fr; } }
+    article { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 1rem 1.1rem; }
+    .tag { display:inline-block; font-size:.72rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase; padding:.2rem .45rem; border-radius:999px; }
+    .ok { background:#123524; color:var(--ok); }
+    .wait { background:#3a2d0c; color:var(--wait); }
+    .no { background:#3a1414; color:var(--no); }
+    a { color:#8cb4ff; }
+    ul { margin: .4rem 0 0; padding-left: 1.1rem; }
+    footer { color:var(--muted); font-size:.9rem; margin-top: 2rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="tag ok">Connected · GitHub + Vercel + Linear</p>
+    <h1>OrgSuite Meta Developers</h1>
+    <p class="lead">Companion site for creating a Meta app the official way. This deploy is not a Meta App ID. App Review and Business Verification still need the owner Facebook login.</p>
+
+    <div class="grid two">
+      <article>
+        <h2>Completed here</h2>
+        <ul>
+          <li>Public GitHub repo with MIT license</li>
+          <li>Privacy policy URL for App Review</li>
+          <li>App Review owner checklist</li>
+          <li>Links to existing certificate guidance repos</li>
+        </ul>
+      </article>
+      <article>
+        <h2>Requires Authorization</h2>
+        <ul>
+          <li>Facebook account + Meta developer registration</li>
+          <li>Create app at developers.facebook.com/apps/creation</li>
+          <li>Business Verification</li>
+          <li>Advanced Access App Review</li>
+        </ul>
+      </article>
+    </div>
+
+    <article style="margin-top:1rem">
+      <h2>Owner checklist</h2>
+      <ol>
+        <li>Open <a href="https://developers.facebook.com/async/registration">Meta developer registration</a> while logged into Facebook.</li>
+        <li>Create the app at <a href="https://developers.facebook.com/apps/creation/">apps/creation</a>. Use case: own business first (Standard Access) unless this must serve other businesses.</li>
+        <li>Privacy Policy URL: <a href="/privacy.html">/privacy.html</a> on this site.</li>
+        <li>Store App ID in Vercel env as <code>META_APP_ID</code>. Store App Secret as <code>META_APP_SECRET</code> only in Vercel — never in GitHub.</li>
+        <li>Log one successful Graph API call per permission before requesting Advanced Access.</li>
+        <li>Submit App Review only after recordings and Business Verification are ready.</li>
+      </ol>
+    </article>
+
+    <div class="grid two" style="margin-top:1rem">
+      <article>
+        <h2>Existing OrgSuite Meta surfaces</h2>
+        <ul>
+          <li><a href="https://orgsuite-meta-ai-agent.vercel.app">Meta AI Agent</a></li>
+          <li><a href="https://github.com/pointgoddesscc-sketch/meta-orgsuite">meta-orgsuite</a></li>
+          <li><a href="https://github.com/pointgoddesscc-sketch/orgsuite-facebook-third-party-notices">Facebook notices</a></li>
+          <li><a href="https://linear.app/pse-management/project/add-whatsapp-business-meta-ai-as-orgsuite-destination-343283c7be02">Linear: WhatsApp / Meta destination</a></li>
+        </ul>
+      </article>
+      <article>
+        <h2>License and certificates</h2>
+        <ul>
+          <li><a href="https://github.com/pointgoddesscc-sketch/orgsuite-meta-developers/blob/main/LICENSE">MIT LICENSE</a></li>
+          <li><a href="https://github.com/pointgoddesscc-sketch/orgsuite-meta-developers/blob/main/CERTIFICATES.md">CERTIFICATES.md</a></li>
+          <li><a href="https://github.com/pointgoddesscc-sketch/orgsuite-beta-developer-certificate">Apple / beta certificate guidance</a></li>
+          <li><a href="https://github.com/pointgoddesscc-sketch/orgsuite-google-developer-certificate">Google developer certificate guidance</a></li>
+        </ul>
+      </article>
+    </div>
+
+    <footer>
+      Point Goddess CC / PSE Management · No secrets in this repo · Source: <a href="https://github.com/pointgoddesscc-sketch/orgsuite-meta-developers">GitHub</a>
+    </footer>
+  </main>
+</body>
+</html>
